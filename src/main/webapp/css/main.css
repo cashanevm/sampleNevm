@@ -11,6 +11,7 @@ body{
 
 }
 .header__ul{ 
+    width: 400px;
     margin:  69px 10% 0 20%;
     display: flex;
 }
@@ -49,7 +50,6 @@ header{
 img[alt="Stroke__blue"]{
     margin: 36px 0 0 310px;
     width: 257px;
-    display: none;
 }
 img[alt="Stroke__white"]{
     width: inherit;
@@ -544,7 +544,11 @@ display: none;
 }
 #contact__section{
     padding-top: 164px ;
-    display: none;
+    display: flex;
+}
+.contact__input p{
+    padding: 20px 0;
+    color: white;
 }
 .contact__input{
     padding: 84px 310px 85px 110px;
@@ -555,7 +559,22 @@ display: none;
 .contact__text{
     width: 920px;
 }
-.contact__input input{
+/* .contact__input input{
+    padding: 24px 0 23px 40px;
+    color: white;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 0 0 20px 0;
+    width: 310px;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 3px solid white;
+} */
+.text{
     padding: 24px 0 23px 40px;
     color: white;
     font-size: 16px;
@@ -570,6 +589,58 @@ display: none;
     background-color: rgba(0, 0, 0, 0);
     border: 3px solid white;
 }
+.text3{
+    font-size: 70px;
+}
+.check{
+    /* padding: 24px 0 23px 40px; */
+    color: white;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 0 0 20px 0;
+    width: 70px;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 3px solid white;
+}
+.country{
+    padding: 24px 0 23px 40px;
+    color: white;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 0 0 20px 0;
+    width: 310px;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 3px solid white;
+}
+.but__form{
+    padding: 24px 0 23px 40px;
+    color: white;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 0 0 20px 0;
+    width: 310px;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 3px solid white;
+}
+.country option{
+background-color: #333333;
+}
+
 .contact__input input::placeholder{
     /* padding: 24px 185px 23px 40px; */
     opacity: 70%;
@@ -702,4 +773,24 @@ padding: 130px 110px 184px 310px;
 .namber__project{
     position: absolute;
     
+}
+#main__submit{
+    padding: 150px 0 0 0;
+}
+#main__submit p{
+    text-align: center;
+    color: white;
+    padding: 20px 0 20px 0;
+background-color: #0058A2;
+  font-size: 70px;
+}
+#main__submit a{
+    text-decoration: none;
+    margin-top: 20px;
+    border-top: 3px solid white;
+    text-align: center;
+    color: white;
+    padding: 20px 45% 20px 45%;
+background-color: #0058A2;
+  font-size: 70px;
 }

@@ -24,24 +24,11 @@
 <body>
 
     <header>
-    <img id="logo__blue" src="img/Logo.png" alt="Stroke__blue">
-<div id="logo__white" class="logo">
-    <img  src="img/Vector 1 (Stroke).png" alt="Stroke__white">
-    <img  src="img/HOLMES BUILDERS.png" alt="HOLMES">
-</div>
+    <img id="logo__blue" src="../img/Logo.png" alt="Stroke__blue">
 
-
-<nav class="header__nav">
-    <ul class="header__ul">
-        <li> <a id="about" href="#ABOUT"> ABOUT</a></li>
-        <li> <a id="investors" href="#INVESTORS"> INVESTORS</a></li>
-        <li> <a id="projects"href="#OUR PROJECTS"> PROJECTS</a> </li>
-        <li> <a id="contact"href="#CONTACT">CONTACT</a> </li>
-    </ul>
-</nav>
 
 </header>
-<div id="contact__section">
+<div id="contact__section" >
     <div class="contact__text">
         <h1>Special for <br>
             our investors!</h1>
@@ -49,34 +36,34 @@
                 <br>
             Sed a felis non nunc facilisis porttitor a nec massa. Morbi sollicitudin ante vitae purus rutrum, eu egestas ante auctor. Nullam venenatis nunc eget tellus maximus, suscipit feugiat erat egestas. Nam vestibulum eu metus vitae euismod.</p>
     </div>
-    <div class="contact__input">
-        <div style="width: 310px; margin-right: 20px;">
+    <div class="contact__input" >
+        
             <form action="submit.jsp" method="post">
-                Name: <input type="text" name="name" required><br/>
-                Gender: 
-                <input type="radio" name="gender" value="male">Male</input>
-                <input type="radio" name="gender" value="female" checked="checked">Female</input><br/>
-                Language: 
-                <input type="checkbox" name="language" value="Ukrainian">Ukrainian</input>
-                <input type="checkbox" name="language" value="English">English</input><br/>
-                
-                <button type="submit">Submit</button>
-    
+
+                <input type="hidden" name="title" value="Submited"/>
+                <p>Full name: </p>
+                <input type="text" class="text" name="name"/>
+                <br/>
+                <p>Gender: </p>
+                <input type="radio" class="check"  name="gender" value="male"> Male
+                <input type="radio" class="check" name="gender" value="female"> Female 
+                <br/>
+                <p>Languages know: </p>
+                <input type="checkbox" class="check" name="language" value="English"> English
+                <input type="checkbox" class="check" name="language" value="Ukrainian"> Ukrainian
+                <input type="checkbox" class="check" name="language" value="French"> French
+                <br/>
+                <p>Country: </p>
+                <select name="country" class="country">
+                    <option value="Ukraine">Ukraine</option>
+                    <option value="USA">USA</option>
+                    <option value="UK">UK</option>
+                    <option value="Finland">Finland</option>
+                    <option value="Fiji">Fiji</option>
+                </select><br/>
+                <input type="submit" class="but__form" value="Submit">   
             </form>
-        </div>
-        <div style="width: 310px; margin-right: 20px;">
-        <input type="text" placeholder="Business Name">
-            <div class="input__qu">
-                <p>Are you a <br>contractor?</p> 
-                <button>Yes</button>
-                <button>No</button>
-            </div>
-        <input type="text" placeholder="&#128274 License number">
-        <input type="text" placeholder="What brings">
-        <input type="text" placeholder="Referred by">
-        <input type="text" placeholder="Additional Information">
-        <button id="input__submit">LET’S GET IT</button>
-        </div>
+        
     </div>
 </div>
 <!-- <div class="input__thank">

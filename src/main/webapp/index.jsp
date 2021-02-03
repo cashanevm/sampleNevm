@@ -22,7 +22,6 @@
 <body>
 
     <header>
-    <img id="logo__blue" src="img/Logo.png" alt="Stroke__blue">
 <div id="logo__white" class="logo">
     <img  src="img/Vector 1 (Stroke).png" alt="Stroke__white">
     <img  src="img/HOLMES BUILDERS.png" alt="HOLMES">
@@ -38,11 +37,14 @@
         <a href="<%=request.getContextPath()%>/pages/form.jsp">Go to form</a><br/>
         <a href="<%=request.getContextPath()%>/pages/bean.jsp">Go to bean properities</a><br/> -->
 
-        <li> <a id="about" href="<%=request.getContextPath()%>/servlet1">Go to Servlet1</a></li>
+        <!-- <li> <a id="about" href="<%=request.getContextPath()%>/servlet1">Go to Servlet1</a></li>
         <li> <a id="investors" href="<%=request.getContextPath()%>/pages/page1.jsp">Go to page.jsp</a></li>
         <li> <a id="projects" href="<%=request.getContextPath()%>/pages/form.jsp">Go to form</a></li>
         <li> <a id="contact" href="<%=request.getContextPath()%>/pages/login.jsp">Login</a> </li>
-        <li> <a id="contact" href="<%=request.getContextPath()%>/pages/bean.jsp">Go to bean properities</a> </li>
+        <li> <a id="contact" href="<%=request.getContextPath()%>/pages/bean.jsp">Go to bean properities</a> </li> -->
+        
+        <li> <a href="<%=request.getContextPath()%>/pages/form.jsp">Go to form</a> </li>
+        <li> <a href="<%=request.getContextPath()%>/pages/submit.jsp">GO to submit</a> </li>
     </ul>
 </nav>
 
@@ -202,38 +204,7 @@
         <button>FULL SIZE</button></div>
     </div>
 </div>
-<div id="contact__section">
-    <div class="contact__text">
-        <h1>Special for <br>
-            our investors!</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non leo aliquet, bibendum purus nec, accumsan tortor. Sed in pretium sapien. Aenean id tempor tortor. Duis risus justo, varius a urna at, ornare accumsan elit. Proin ut faucibus lorem. Suspendisse vestibulum lectus a diam rutrum, sit amet vulputate purus ultrices. Aenean sit amet scelerisque metus. Nullam egestas quam id consectetur varius. 
-                <br>
-            Sed a felis non nunc facilisis porttitor a nec massa. Morbi sollicitudin ante vitae purus rutrum, eu egestas ante auctor. Nullam venenatis nunc eget tellus maximus, suscipit feugiat erat egestas. Nam vestibulum eu metus vitae euismod.</p>
-    </div>
-    <div class="contact__input">
-        <div style="width: 310px; margin-right: 20px;">
-        <input type="text" placeholder="First name">
-        <input type="text" placeholder="Last name">
-        <input type="text" placeholder="Phone">
-        <input type="email" placeholder="E-mail">
-        <input type="text" placeholder="Budget                                      $">
-        <input type="text" placeholder="Location">
-        </div>
-        <div style="width: 310px; margin-right: 20px;">
-        <input type="text" placeholder="Business Name">
-            <div class="input__qu">
-                <p>Are you a <br>contractor?</p> 
-                <button>Yes</button>
-                <button>No</button>
-            </div>
-        <input type="text" placeholder="&#128274 License number">
-        <input type="text" placeholder="What brings">
-        <input type="text" placeholder="Referred by">
-        <input type="text" placeholder="Additional Information">
-        <button id="input__submit">LET’S GET IT</button>
-        </div>
-    </div>
-</div>
+
 <!-- <div class="input__thank">
     <h1>Thank you for the application</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum, quam nec faucibus 
