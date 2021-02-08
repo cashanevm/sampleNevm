@@ -3,22 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package knu.fit.mit.web1;
+package org.obrii.mit.dp2021.nevmerzhytskyi.nevmerzhytskyiproject;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
-import javax.servlet.http.Cookie;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author 38068
+ * @author NEVM PC
  */
-public class servlet2 extends HttpServlet {
+@WebServlet(name = "NewServlet", urlPatterns = {"/form"})
+public class Form extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -29,22 +29,30 @@ public class servlet2 extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try ( PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet Servlet2</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet Servlet2 at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
-    }
+    
+    @Override
+protected void doGet(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException{
+        request.getRequestDispatcher("pages/form.jsp").forward(request, response);
+
+}
+    
+    @Override
+protected void doPost(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException{
+    User user = new User(
+    request.getParameter("name"),
+    request.getParameter("gender"),
+    request.getParameterValues("language"),
+    request.getParameter("country")
+    );
+    
+        request.setAttribute("user", user);
+        request.getRequestDispatcher("pages/submit.jsp").forward(request, response);
+
+}
+   
+ 
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -72,23 +80,7 @@ public class servlet2 extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-            
-        
-        String userName = request.getParameter("userName");
-        String password = request.getParameter("password");
-        
-        if(userName.equals("Roman")&&password.equals("111")){
-            request.getSession().invalidate();
-            HttpSession newSession = request.getSession(true);
-            newSession.setMaxInactiveInterval(300);
-            Cookie cUserName = new Cookie("userName", userName);
-            response.addCookie(cUserName);
-            response.sendRedirect("./pages/afterLogin.jsp");
-            
-        }else{
-            response.sendRedirect("login.jsp");
-        }
-        
+        processRequest(request, response);
     }
 
     /**

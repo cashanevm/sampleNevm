@@ -42,8 +42,10 @@
         <li> <a id="projects" href="<%=request.getContextPath()%>/pages/form.jsp">Go to form</a></li>
         <li> <a id="contact" href="<%=request.getContextPath()%>/pages/login.jsp">Login</a> </li>
         <li> <a id="contact" href="<%=request.getContextPath()%>/pages/bean.jsp">Go to bean properities</a> </li> -->
-        
-        <li> <a href="<%=request.getContextPath()%>/pages/form.jsp">Go to form</a> </li>
+        <li> <form action="<%=request.getContextPath()%>/form" method="get">
+                <input id="get__started" type="submit" value="Call form"> 
+            </form> </li>
+<!--        <li> <a href="<%=request.getContextPath()%>/pages/form.jsp">Go to form</a> </li>-->
         <li> <a href="<%=request.getContextPath()%>/pages/submit.jsp">GO to submit</a> </li>
     </ul>
 </nav>
@@ -56,7 +58,7 @@
     without over <br>
     prices & long terms</h1>
     <p>We looks like fake but it false opinion</p>
-    <button id="get__started">GET STRATED</button>
+    <button >GET STRATED</button>
 </div>
 <div id="who__we">
     <div class="who__qu">

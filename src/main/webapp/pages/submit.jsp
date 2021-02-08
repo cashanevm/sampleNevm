@@ -5,36 +5,24 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="org.obrii.mit.dp2021.nevmerzhytskyi.nevmerzhytskyiproject.User"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Submit</title>
-        <link rel="stylesheet" href="../css/reset.css">
-        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="<%=request.getContextPath()%>/css/reset.css">
+        <link rel="stylesheet" href="<%=request.getContextPath()%>/css/main.css">
     </head>
     <body>
         <header>
-            <img id="logo__blue" src="../img/Logo.png" alt="Stroke__blue">
+            <img id="logo__blue" src="<%=request.getContextPath()%>/img/Logo.png" alt="Stroke__blue">
         
         
         </header>
 
     <div id="main__submit">
-        <p>Name: <%= request.getParameter("name")%></p>
-        <p>Gender: <%= request.getParameter("gender")%></p>
-        <p>Languages known: <%
-    String[] countries = request.getParameterValues("language");
-    if (countries != null) {
-        for (int i = 0; i < countries.length; i++) {
-            out.print("<br/>");
-            out.print(countries[i]);
-
-        }
-    } else {
-        out.print("None Selected");
-    }%></p>
-        <p>Country: <%= request.getParameter("country")%></p>   
+        <p><%  User user = (User) request.getAttribute("user");%> <%=user%></p>   
         <a href="<%=request.getContextPath()%>">Return</a>
 </div>
 

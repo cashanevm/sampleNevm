@@ -13,8 +13,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOLMES-BUILDERS</title>
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/reset.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/main.css">
     <!-- <link rel="stylesheet" href="css/300.css">
     <link rel="stylesheet" href="css/300-700.css">
     <link rel="stylesheet" href="css/700-1000.css">
@@ -24,7 +24,7 @@
 <body>
 
     <header>
-    <img id="logo__blue" src="../img/Logo.png" alt="Stroke__blue">
+    <img id="logo__blue" src="<%=request.getContextPath()%>/img/Logo.png" alt="Stroke__blue">
 
 
 </header>
@@ -38,7 +38,7 @@
     </div>
     <div class="contact__input" >
         
-            <form action="submit.jsp" method="post">
+            <form action="<%=request.getContextPath()%>/form" method="post">
 
                 <input type="hidden" name="title" value="Submited"/>
                 <p>Full name: </p>
