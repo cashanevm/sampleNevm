@@ -13,6 +13,8 @@
     <title>HOLMES-BUILDERS</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="css/300.css">
     <link rel="stylesheet" href="css/300-700.css">
     <link rel="stylesheet" href="css/700-1000.css">

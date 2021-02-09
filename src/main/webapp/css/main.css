@@ -21,7 +21,8 @@ body{
 
 
 *{
-    font-family: "GothamPro";
+    font-family: 'Roboto', sans-serif;
+/*    font-family: "GothamPro";*/
 
 }
 .header__ul{ 
