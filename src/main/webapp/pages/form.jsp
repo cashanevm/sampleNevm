@@ -12,14 +12,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOLMES-BUILDERS</title>
+    <title>Nevm form</title>
     <link rel="stylesheet" href="<%=request.getContextPath()%>/css/reset.css">
     <link rel="stylesheet" href="<%=request.getContextPath()%>/css/main.css">
-    <!-- <link rel="stylesheet" href="css/300.css">
-    <link rel="stylesheet" href="css/300-700.css">
-    <link rel="stylesheet" href="css/700-1000.css">
-    <link rel="stylesheet" href="css/1000-1200.css">
-    <link rel="stylesheet" href="css/1200+.css"> -->
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/300.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/300-700.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/700-1000.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/1000-1200.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/1200+.css"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -45,13 +47,20 @@
                 <input type="text" class="text" name="name"/>
                 <br/>
                 <p>Gender: </p>
-                <input type="radio" class="check"  name="gender" value="male"> Male
-                <input type="radio" class="check" name="gender" value="female"> Female 
+                <input type="radio" class="check"  name="gender" value="male">
+                <label for="male">Male</label>
+                
+                <input type="radio" class="check" name="gender" value="female"> 
+                <label for="Female">Female</label>
+                
                 <br/>
                 <p>Languages know: </p>
-                <input type="checkbox" class="check" name="language" value="English"> English
-                <input type="checkbox" class="check" name="language" value="Ukrainian"> Ukrainian
-                <input type="checkbox" class="check" name="language" value="French"> French
+                <input type="checkbox" class="check" name="language" value="English">
+                <label for="English">English</label>
+                <input type="checkbox" class="check" name="language" value="Ukrainian">
+                <label for="Ukrainian">Ukrainian</label>
+                <input type="checkbox" class="check" name="language" value="French">
+                <label for="French">French</label>
                 <br/>
                 <p>Country: </p>
                 <select name="country" class="country">
@@ -59,9 +68,9 @@
                     <option value="USA">USA</option>
                     <option value="UK">UK</option>
                     <option value="Finland">Finland</option>
-                    <option value="Fiji">Fiji</option>
+                    <option value="Fiji">French</option>
                 </select><br/>
-                <input type="submit" class="but__form" value="Submit">   
+                <input type="submit" class="but__form" value="Submit">      
             </form>
         
     </div>
@@ -87,15 +96,6 @@
 </div>
 <footer>
     <img src="img/Logo.png" alt="">
-    <nav>
-        <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">INVESTORS</a></li>
-            <li><a href="#">OUR PROJECTS</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">CONTACT</a></li>
-        </ul>
-    </nav>
     <div class="footer__email">
         <p>Investor Newsletter Sign Up</p>
         <input type="email" placeholder="E-mail">

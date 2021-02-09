@@ -10,9 +10,16 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Submit</title>
+        <title>Nevm submit</title>
         <link rel="stylesheet" href="<%=request.getContextPath()%>/css/reset.css">
         <link rel="stylesheet" href="<%=request.getContextPath()%>/css/main.css">
+        <link rel="stylesheet" href="<%=request.getContextPath()%>/css/300.css">
+        <link rel="stylesheet" href="<%=request.getContextPath()%>/css/300-700.css">
+        <link rel="stylesheet" href="<%=request.getContextPath()%>/css/700-1000.css">
+        <link rel="stylesheet" href="<%=request.getContextPath()%>/css/1000-1200.css">
+        <link rel="stylesheet" href="<%=request.getContextPath()%>/css/1200+.css"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -29,15 +36,6 @@
 
 <footer>
     <img src="img/Logo.png" alt="">
-    <nav>
-        <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">INVESTORS</a></li>
-            <li><a href="#">OUR PROJECTS</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">CONTACT</a></li>
-        </ul>
-    </nav>
     <div class="footer__email">
         <p>Investor Newsletter Sign Up</p>
         <input type="email" placeholder="E-mail">

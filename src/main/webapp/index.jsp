@@ -10,16 +10,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOLMES-BUILDERS</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/main.css">
+    <title>Nevm main</title>
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/reset.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/main.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/300.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/300-700.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/700-1000.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/1000-1200.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/1200+.css"> 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="css/300.css">
-    <link rel="stylesheet" href="css/300-700.css">
-    <link rel="stylesheet" href="css/700-1000.css">
-    <link rel="stylesheet" href="css/1000-1200.css">
-    <link rel="stylesheet" href="css/1200+.css"> -->
 </head>
 <body>
 
@@ -48,7 +48,6 @@
                 <input id="get__started" type="submit" value="Call form"> 
             </form> </li>
 <!--        <li> <a href="<%=request.getContextPath()%>/pages/form.jsp">Go to form</a> </li>-->
-        <li> <a href="<%=request.getContextPath()%>/pages/submit.jsp">GO to submit</a> </li>
     </ul>
 </nav>
 
@@ -136,7 +135,7 @@
 
 <div id="projects__block">
     <div class="project__item">
-        <img class="namber__project" src="img/001.png" style=" width: 415px; left: -120px; top: 230px;" alt="">
+        
         <img src="img/image.png" alt="">
         <div class="project__text">
             <h1>Name of this project</h1>
@@ -146,11 +145,10 @@
                 <p>Aera: <br><span>2 024 m<sup><small>2</small></sup></span></p>
             </div>
         </div>
-        <button class="priv">‹</button>
-        <button class="next">›</button>
+        
     </div>
     <div class="project__item">
-        <img class="namber__project" src="img/002.png" style=" width: 415px; left: 1195px; top: 230px;" alt="">
+        
         <img src="img/Image (1).png" alt="">
         <div class="project__text">
             <h1>Name of this project</h1>
@@ -160,11 +158,10 @@
                 <p>Aera: <br><span>2 024 m<sup><small>2</small></sup></span></p>
             </div>
         </div>
-        <button class="priv">‹</button>
-        <button class="next">›</button>
+        
     </div>
     <div class="project__item">
-        <img class="namber__project" src="img/003.png" style=" width: 415px; left: -120px; top: 230px;" alt="">
+        
         <img src="img/Image (2).png" alt="">
         <div class="project__text">
             <h1>Name of this project</h1>
@@ -174,8 +171,7 @@
                 <p>Aera: <br><span>2 024 m<sup><small>2</small></sup></span></p>
             </div>
         </div>
-        <button class="priv">‹</button>
-        <button class="next">›</button>
+        
     </div>
 </div>
 <div id="email__block">
@@ -186,7 +182,7 @@
 </div>
 <div id="certificate__block" >
     <div class="certificate__section">
-        <img src="img/Image (3).png" alt="">
+        <img src="img/image__3.png" alt="">
         <div class="certificate__text">
         <h1>International Certificate <br>
             “Best Contruction <br>
@@ -197,7 +193,7 @@
         <button>FULL SIZE</button></div>
     </div>
     <div class="certificate__section" style="margin-top: 120px ;">
-        <img src="img/image (4).png" alt="">
+        <img src="img/Image__4.png" alt="">
         <div class="certificate__text">
         <h1>International Certificate <br>
             “Best Contruction <br>
@@ -230,15 +226,6 @@
 </div>
 <footer>
     <img src="img/Logo.png" alt="">
-    <nav>
-        <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">INVESTORS</a></li>
-            <li><a href="#">OUR PROJECTS</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">CONTACT</a></li>
-        </ul>
-    </nav>
     <div class="footer__email">
         <p>Investor Newsletter Sign Up</p>
         <input type="email" placeholder="E-mail">
