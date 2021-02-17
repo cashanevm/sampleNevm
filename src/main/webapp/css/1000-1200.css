@@ -1,7 +1,7 @@
 @media (min-width: 1000px) and (max-width: 1200px) { 
     @font-face {
         font-family: "GothamPro"; 
-        src: url("<%=request.getContextPath()%>/ttf/GothamPro.ttf") format("truetype"); 
+        src: url("../ttf/GothamPro.ttf") format("truetype"); 
     }
     .footer__email{
         margin-left: 200px ;
@@ -16,7 +16,7 @@
     }
     .right__submit{
         width: 49.47%;
-        background-image: url(/NevmerzhytskyiProject/img/Rectangle_1.png);
+        background-image: url(../img/Rectangle_1.png);
         height: 780px;
     }
     .left__submit{

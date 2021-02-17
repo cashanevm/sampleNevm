@@ -7,6 +7,9 @@ package org.obrii.mit.dp2021.nevmerzhytskyi.nevmerzhytskyiproject;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -40,15 +43,44 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response)
     @Override
 protected void doPost(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException{
-    User user = new User(
-    request.getParameter("name"),
-    request.getParameter("gender"),
-    request.getParameterValues("language"),
-    request.getParameter("country")
-    );
     
-        request.setAttribute("user", user);
-        request.getRequestDispatcher("pages/submit.jsp").forward(request, response);
+    UserInterface user = createUser(request.getParameter("name"));
+    
+    OldDisplayInterface display;
+    
+    if(request.getParameter("interface").equals("old")){
+       if (request.getParameter("message").equals("parent")){
+               display = new Display(user);
+       }
+       else{
+           display = new ChildDisplayOld(user);
+       }
+       
+    }
+    else{
+        display = new ChildDisplayNew(user);
+    }
+    
+    List<String> messages = createMassages(display);
+    request.setAttribute("messages",messages);
+    request.getRequestDispatcher("pages/submit.jsp").forward(request, response);
+
+    
+    //User user = new User(
+    //request.getParameter("name"),
+    //request.getParameter("gender"),
+    //request.getParameterValues("language"),
+    //request.getParameter("country")
+    //);
+    //Display display = new Display();
+    
+    //System.out.print(display.showDisplay(user));
+    
+    
+    
+    
+        //request.setAttribute("user", user);
+        //request.getRequestDispatcher("pages/submit.jsp").forward(request, response);
 
 }
    
@@ -61,7 +93,31 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response)
      *
      * @return a String containing servlet description
      */
-    @Override
+    public UserInterface createUser(String name){
+    try{
+        int userNumber = Integer.parseInt(name);
+        return new User(userNumber);
+       }catch (NumberFormatException e){
+           return new User(name);
+       }
+    
+    }
+
+    public List<String> createMassages(OldDisplayInterface display){
+    
+    List<String> result = new ArrayList();
+    result.add(display.showMessage());
+    
+    if(display instanceof NewDisplayInterface){
+    result.add(((NewDisplayInterface)display).showAnotherMessage());
+    }
+    return result;
+    
+    }
+
+
+
+@Override
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>

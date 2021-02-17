@@ -43,10 +43,10 @@ for(String message : messages){%>
 <p><%=message%></p>
 <%}%>
 
-<form action="/NevmerzhytskyiProject/form" mathod="get"> 
+<form action="<%=request.getContextPath()%>/form" mathod="get"> 
             <input type="submit" value="Return to form" />
         </form>
-        <form action="/NevmerzhytskyiProject" mathod="get"> 
+        <form action="<%=request.getContextPath()%>" mathod="get"> 
             <input type="submit" value="Return to start page" />
         </form>
     </div>
