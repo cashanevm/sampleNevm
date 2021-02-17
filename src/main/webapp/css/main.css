@@ -2,3 +2,99 @@ body{
     /* min-width: 1920px;
     max-width: 1920px; */
 }
+
+.left__submit h1{
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    color: #0455BF;
+
+}
+.left__submit p{
+    margin: 30px 0 60px 0;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: black;
+
+}
+.left__submit form input{
+    background-color: #0058A2;
+    width: 310px;
+    color: white;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: center;
+    border: none;
+    padding: 29px 0 25px 0;
+    margin-bottom: 30px;
+}
+
+.contact__input h1{
+    color: white;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    
+
+}
+.contact__input form label{
+    color: white;
+    font-size: 25px;
+}
+.contact__input input[type="radio"]{
+margin: 0 10px;
+width: 25px;
+height: 25px;
+}
+
+.contact__input input[type="text"]{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    width: 310px;
+    height: 70px;
+    background-color: rgba(0, 0,0 , 0);
+    border: 3px solid white;
+    color: white;
+}
+
+.contact__input input[type="text"]::placeholder{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+}
+
+.contact__input input[type="submit"]{
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-top: 20px;
+    width: 310px;
+    height: 70px;
+    border: none;
+    background-color: white;
+    color: #0455BF;
+}

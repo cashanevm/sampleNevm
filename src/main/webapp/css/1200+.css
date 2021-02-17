@@ -3,6 +3,27 @@
         font-family: "GothamPro"; 
         src: url("<%=request.getContextPath()%>/ttf/GothamPro.ttf") format("truetype"); 
     }
+    .footer__email{
+        margin-left: 450px ;
+    }
+    img[alt="Submit2"] {
+        position: absolute;
+        width: 352px;
+        margin: 20px 0 0 313px;
+    }
+    .main__submit{
+        display: flex;
+    }
+    .right__submit{
+        width: 49.47%;
+        background-image: url(../img/Rectangle_1.png);
+        height: 780px;
+    }
+    .left__submit{
+        margin: 255px 2.3% 0 15.9%;
+        width: 50.53%;
+    }
+
     #get__started{
         background-color: #0058A2;
         padding: 27px 69px;
@@ -712,7 +733,7 @@
     }
     
     .contact__text{
-        width: 30%;
+        width: 60%;
         padding: 130px 5.7% 60px 5.7%;
     }
     .contact__text h1{

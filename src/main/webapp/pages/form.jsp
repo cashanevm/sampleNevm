@@ -14,12 +14,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nevm form</title>
     <link rel="stylesheet" href="<%=request.getContextPath()%>/css/reset.css">
-    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/main.css">
+    
     <link rel="stylesheet" href="<%=request.getContextPath()%>/css/300.css">
     <link rel="stylesheet" href="<%=request.getContextPath()%>/css/300-700.css">
     <link rel="stylesheet" href="<%=request.getContextPath()%>/css/700-1000.css">
     <link rel="stylesheet" href="<%=request.getContextPath()%>/css/1000-1200.css">
     <link rel="stylesheet" href="<%=request.getContextPath()%>/css/1200+.css"> 
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
@@ -41,36 +42,17 @@
     <div class="contact__input" >
         
             <form action="<%=request.getContextPath()%>/form" method="post">
-
-                <input type="hidden" name="title" value="Submited"/>
-                <p>Full name: </p>
-                <input type="text" class="text" name="name"/>
-                <br/>
-                <p>Gender: </p>
-                <input type="radio" class="check"  name="gender" value="male">
-                <label for="male">Male</label>
-                
-                <input type="radio" class="check" name="gender" value="female"> 
-                <label for="Female">Female</label>
-                
-                <br/>
-                <p>Languages know: </p>
-                <input type="checkbox" class="check" name="language" value="English">
-                <label for="English">English</label>
-                <input type="checkbox" class="check" name="language" value="Ukrainian">
-                <label for="Ukrainian">Ukrainian</label>
-                <input type="checkbox" class="check" name="language" value="French">
-                <label for="French">French</label>
-                <br/>
-                <p>Country: </p>
-                <select name="country" class="country">
-                    <option value="Ukraine">Ukraine</option>
-                    <option value="USA">USA</option>
-                    <option value="UK">UK</option>
-                    <option value="Finland">Finland</option>
-                    <option value="Fiji">French</option>
-                </select><br/>
-                <input type="submit" class="but__form" value="Submit">      
+                  <h1>Method overloading</h1>
+                    <p>User name(or number):</p>  
+                    <input type="text" name="name"><br/>
+                    <p>method getMessage:</p>
+                    <input type="radio" name="message" value="parent" checked="true"> <label>Parent</label> 
+                    <input type="radio" name="message" value="overriden" > <label>Overriden</label> 
+                    <p>interface:</p>
+                    <input type="radio" name="interface" value="old" checked="true"><label>Old</label> 
+                    <input type="radio" name="interface" value="new" > <label>New</label> 
+                    <br>
+                    <input type="submit" value="submit">
             </form>
         
     </div>
@@ -99,7 +81,7 @@
     <div class="footer__email">
         <p>Investor Newsletter Sign Up</p>
         <input type="email" placeholder="E-mail">
-        <button id="footer__button">›</button>
+        
     </div>
 </footer>
 <script src="js/main.js"></script>

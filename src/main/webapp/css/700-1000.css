@@ -3,6 +3,24 @@
         font-family: "GothamPro"; 
         src: url("<%=request.getContextPath()%>/ttf/GothamPro.ttf") format("truetype"); 
     }
+    .footer__email{
+        margin-left: 0 ;
+    }
+    img[alt="Submit2"] {
+        position: absolute;
+        width: 352px;
+        margin: 20px 0 0 150px;
+    }
+    .main__submit{
+        display: block;
+    }
+    .right__submit{
+        display: none;
+    }
+    .left__submit{
+        padding: 255px 2.3% 0 15.9%;
+        width: 100%;
+    }
     #get__started{
         background-color: #0058A2;
         padding: 27px 69px;
@@ -564,6 +582,7 @@
         /* display: flex; */
     }
     .contact__input p{
+        
         padding: 20px 0;
         color: white;
     }
