@@ -24,7 +24,7 @@ public class ChildDisplayNew extends ChildNewAbstractDisplay{
 
     @Override
     public String showAnotherMessage() {
-        return "Another massage from Child user: " + getUserInterface().getName();
+        return "Also greetings from the daughter class, " + getUserInterface().getName()+"!";
     }
-    
+    //also greetings from the daughter class
 }

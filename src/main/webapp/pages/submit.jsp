@@ -30,14 +30,14 @@
     </head>
     <body>
 <header>
-            <img id="logo__blue" src="/NevmerzhytskyiProject/img/LogoType2.png" alt="Submit2">
+            <img id="logo__blue" src="<%=request.getContextPath()%>/img/LogoType2.png" alt="Submit2">
 </header>
 <main class="main__submit">
     <div class="left__submit">
 <%
 List<String> messages = (List<String>) request.getAttribute("messages");
 %>
-<h1>Mas:</h1>
+<h1>Welcome!</h1>
 <%
 for(String message : messages){%>
 <p><%=message%></p>

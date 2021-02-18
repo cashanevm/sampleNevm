@@ -24,6 +24,7 @@
         width: 50.53%;
     }
     #get__started{
+        width: 310px;
         background-color: #0058A2;
         padding: 27px 69px;
         border: none;
@@ -91,6 +92,7 @@
     }
     /* //////////////// */
     #started__block{
+        max-height: 883px;
         padding: 321px 0 192px 310px;
         /* width: 1920px; */
         background-image: url(../img/Background-image.png);
@@ -116,6 +118,8 @@
     }
     
     #started__block button{
+        margin-top: 20px;
+        width: 310px;
         background-color: #0058A2;
         padding: 27px 69px;
         border: none;

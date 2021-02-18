@@ -20,6 +20,7 @@ public class ChildDisplayOld extends Display{
   
     @Override
     public String showMessage() {
-        return "ChildDisplayOld:"+getUserInterface().getName()+"wer";
+        return "Hello, "+getUserInterface().getName()+", you are greeted by the child class.";
     }
 }
+//hello, you are greeted by the parent class

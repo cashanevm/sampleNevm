@@ -22,7 +22,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-
+<div class="shem__main" id="sham__block">
+        <img src="img/shem.png" alt="">
+    </div>
 <header>
     <div id="logo__white" class="logo">
         <img  src="img/Vector 1 (Stroke).png" alt="Stroke__white">
@@ -31,9 +33,7 @@
     <nav class="header__nav">
         <ul class="header__ul">
             <li>
-                <form action="<%=request.getContextPath()%>/form" method="get">
-                <input id="get__started" type="submit" value="Call form"> 
-                </form>
+                
             </li>
         </ul>
     </nav>
@@ -42,8 +42,12 @@
 <main>
     <div id="started__block">
         <h1>Makes homes <br> without over <br>prices & long terms</h1>
-        <p>We looks like fake but it false opinion</p>
-        <button >GET STRATED</button>
+        <p>We looks like fake but it false opinion</p> 
+        <form action="<%=request.getContextPath()%>/form" method="get">
+                <input id="get__started" type="submit" value="GET STRATED"> 
+                </form>
+        <button id="sham__button" >OPEN CIRCUIT</button>
+       
     </div>
     <div id="who__we">
         <div class="who__qu">
@@ -127,11 +131,11 @@
         <h1>Subscribe on our Investor Newsletter Sign Up</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eleifend libero at vulputate vehicula. Suspendisse tincidunt justo facilisis magna volutpat volutpat.</p>
         <input type="email" placeholder="E-mail">
-        <button id="email__button">›</button>
+        
     </div>
     <div id="certificate__block" >
             <div class="certificate__section">
-                <img src="img/image__3.png" alt="">
+                <img src="img/image (3).png" alt="">
                 <div class="certificate__text">
                     <h1>International Certificate <br>“Best Contruction <br>Company 2020”</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eleifend libero at vulputate vehicula. Suspendisse tincidunt justo facilisis magna volutpat volutpat. Aenean finibus auctor velit, quis mattis libero vehicula sit amet. Mauris pulvinar blandit risus vitae vulputate. Pellentesque dignissim tincidunt odio nec sagittis. Mauris nec viverra metus, nec aliquet libero. Praesent finibus eros ac luctus semper.<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eleifend libero at vulputate vehicula. Suspendisse tincidunt justo facilisis magna volutpat volutpat. Aenean finibus auctor velit, quis mattis libero vehicula sit amet. Mauris pulvinar blandit risus vitae vulputate. Pellentesque dignissim</p>
@@ -139,7 +143,7 @@
                 </div>
             </div>
             <div class="certificate__section" style="margin-top: 120px ;">
-                <img src="img/Image__4.png" alt="">
+                <img src="img/Image (4).png" alt="">
                 <div class="certificate__text">
                     <h1>International Certificate <br>“Best Contruction <br>Company 2020”</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eleifend libero at vulputate vehicula. Suspendisse tincidunt justo facilisis magna volutpat volutpat. Aenean finibus auctor velit, quis mattis libero vehicula sit amet. Mauris pulvinar blandit risus vitae vulputate. Pellentesque dignissim tincidunt odio nec sagittis. Mauris nec viverra metus, nec aliquet libero. Praesent finibus eros ac luctus semper.<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eleifend libero at vulputate vehicula. Suspendisse tincidunt justo facilisis magna volutpat volutpat. Aenean finibus auctor velit, quis mattis libero vehicula sit amet. Mauris pulvinar blandit risus vitae vulputate. Pellentesque dignissim</p>
@@ -171,9 +175,9 @@
     <div class="footer__email">
         <p>Investor Newsletter Sign Up</p>
         <input type="email" placeholder="E-mail">
-        <button id="footer__button">›</button>
+        
     </div>
 </footer>
-<script src="js/main.js"></script>
+<script src="<%=request.getContextPath()%>/js/main.js"></script>
 </body>
 </html>

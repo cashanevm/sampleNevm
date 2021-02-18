@@ -44,7 +44,7 @@ public class Display implements OldDisplayInterface{
    
     @Override
     public String showMessage() {
-        return userInterface.getName() +"mass from par";
+        return  "Hello, "+userInterface.getName() +", you are greeted by the parent class.";
     }
 
    
