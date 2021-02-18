@@ -42,7 +42,7 @@
     <div class="contact__input" >
         
             <form action="<%=request.getContextPath()%>/form" method="post">
-                  <h1>Method overloading</h1>
+                  <h1>Let's get started!</h1>
                     <p>User name(or number):</p>  
                     <input type="text" name="name"><br/>
                     <p>method getMessage:</p>
