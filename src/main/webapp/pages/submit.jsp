@@ -30,7 +30,7 @@
     </head>
     <body>
 <header>
-            <img id="logo__blue" src="<%=request.getContextPath()%>/img/LogoType2.png" alt="Submit2">
+            <img id="logo__blue" src="img/LogoType2.png" alt="Submit2">
 </header>
 <main class="main__submit">
     <div class="left__submit">
