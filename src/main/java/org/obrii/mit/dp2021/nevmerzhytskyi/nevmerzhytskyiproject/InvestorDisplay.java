@@ -9,9 +9,9 @@ package org.obrii.mit.dp2021.nevmerzhytskyi.nevmerzhytskyiproject;
  *
  * @author NEVM PC
  */
-public class ChildDisplayOld extends Display{
+public class InvestorDisplay extends Display{
 
-    public ChildDisplayOld(UserInterface userInterface) {
+    public InvestorDisplay(UserInterface userInterface) {
         super(userInterface);
     }
 
@@ -20,7 +20,7 @@ public class ChildDisplayOld extends Display{
   
     @Override
     public String showMessage() {
-        return "Hello, "+getUserInterface().getName()+", you are greeted by the child class.";
+        return "Our congratulations, "+getUserInterface().getName()+", we are happy to work with you, every investor is important to us!";
     }
 }
-//hello, you are greeted by the parent class
+//Our congratulations, we are happy to work with you. every investor is important to us

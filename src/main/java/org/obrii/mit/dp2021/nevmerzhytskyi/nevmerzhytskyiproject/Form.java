@@ -46,19 +46,26 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response)
     
     UserInterface user = createUser(request.getParameter("name"));
     
-    OldDisplayInterface display;
+    DisplayInterface display;
     
     if(request.getParameter("interface").equals("old")){
        if (request.getParameter("message").equals("parent")){
-               display = new Display(user);
+               display = new InvestorDisplay(user);
        }
        else{
-           display = new ChildDisplayOld(user);
+           display = new BuilderDisplay(user);
        }
        
     }
     else{
-        display = new ChildDisplayNew(user);
+         if (request.getParameter("message").equals("parent")){
+               display = new ChildDisplayNew1(user);
+       }
+       else{
+           display = new HouseDisplay(user);
+       }
+        
+        
     }
     
     List<String> messages = createMassages(display);
@@ -103,13 +110,13 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response)
     
     }
 
-    public List<String> createMassages(OldDisplayInterface display){
+    public List<String> createMassages(DisplayInterface display){
     
     List<String> result = new ArrayList();
     result.add(display.showMessage());
     
-    if(display instanceof NewDisplayInterface){
-    result.add(((NewDisplayInterface)display).showAnotherMessage());
+    if(display instanceof HouseDisplayInterface){
+    result.add(((HouseDisplayInterface)display).showAnotherMessage());
     }
     return result;
     

@@ -9,9 +9,9 @@ package org.obrii.mit.dp2021.nevmerzhytskyi.nevmerzhytskyiproject;
  *
  * @author NEVM PC
  */
-public abstract class ChildNewAbstractDisplay extends Display implements NewDisplayInterface{
+public abstract class HouseAbstractDisplay extends Display implements HouseDisplayInterface{
 
-    public ChildNewAbstractDisplay(UserInterface userInterface) {
+    public HouseAbstractDisplay(UserInterface userInterface) {
         super(userInterface);
     }
     

@@ -9,13 +9,13 @@ package org.obrii.mit.dp2021.nevmerzhytskyi.nevmerzhytskyiproject;
  *
  * @author NEVM PC
  */
-public class ChildDisplayNew extends ChildNewAbstractDisplay{
+public class HouseDisplay extends HouseAbstractDisplay{
 
-    public ChildDisplayNew(UserInterface userInterface) {
+    public HouseDisplay(UserInterface userInterface) {
         super(userInterface);
     }
 
-    /*ChildDisplayNew(UserInterface user) {
+    /*HouseDisplay(UserInterface user) {
     throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }*/
 
@@ -24,7 +24,7 @@ public class ChildDisplayNew extends ChildNewAbstractDisplay{
 
     @Override
     public String showAnotherMessage() {
-        return "Also greetings from the daughter class, " + getUserInterface().getName()+"!";
+        return "Please, " + getUserInterface().getName()+", call 0983314491, the administrator will solve the housing problem!";
     }
     //also greetings from the daughter class
 }

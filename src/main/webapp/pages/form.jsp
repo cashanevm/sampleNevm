@@ -45,12 +45,12 @@
                   <h1>Let's get started!</h1>
                     <p>User name(or number):</p>  
                     <input type="text" name="name"><br/>
-                    <p>method getMessage:</p>
-                    <input type="radio" name="message" value="parent" checked="true"> <label>Parent</label> 
-                    <input type="radio" name="message" value="overriden" > <label>Overriden</label> 
-                    <p>interface:</p>
-                    <input type="radio" name="interface" value="old" checked="true"><label>Old</label> 
-                    <input type="radio" name="interface" value="new" > <label>New</label> 
+                    <p>Who you are?</p>
+                    <input type="radio" name="message" value="parent" checked="true"> <label>Investor</label> 
+                    <input type="radio" name="message" value="overriden" > <label>Builder</label> 
+                    <p>Do you need housing (only for builders)?</p>
+                    <input type="radio" name="interface" value="old" checked="true"><label>No</label> 
+                    <input type="radio" name="interface" value="new" > <label>Yes</label> 
                     <br>
                     <input type="submit" value="submit">
             </form>

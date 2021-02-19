@@ -9,7 +9,7 @@ package org.obrii.mit.dp2021.nevmerzhytskyi.nevmerzhytskyiproject;
  *
  * @author NEVM PC
  */
-public class Display implements OldDisplayInterface{
+public class Display implements DisplayInterface{
 
     private UserInterface userInterface;
     
@@ -44,7 +44,8 @@ public class Display implements OldDisplayInterface{
    
     @Override
     public String showMessage() {
-        return  "Hello, "+userInterface.getName() +", you are greeted by the parent class.";
+      
+        return "Our congratulations, "+userInterface.getName() +", we are happy to work with you, every builder is part of our family!";
     }
 
    

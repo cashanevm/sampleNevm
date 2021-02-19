@@ -9,7 +9,7 @@ package org.obrii.mit.dp2021.nevmerzhytskyi.nevmerzhytskyiproject;
  *
  * @author NEVM PC
  */
-public interface NewDisplayInterface {
+public interface HouseDisplayInterface {
    //  public String showAnotherMessage(UserInterface useruInterface);
 
     public String showAnotherMessage();
