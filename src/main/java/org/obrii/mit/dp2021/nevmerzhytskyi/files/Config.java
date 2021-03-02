@@ -3,17 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.obrii.mit.dp2021.nevmerzhytskyi.nevmerzhytskyiproject;
+package org.obrii.mit.dp2021.nevmerzhytskyi.files;
 
 /**
  *
- * @author NEVM PC
+ * @author 38068
  */
-public interface UserInterface {
+public class Config {
     
-    public String getName();
-    
-    public String show();
+    public static final String FILE_NAME="data.txt";
     
 }
-

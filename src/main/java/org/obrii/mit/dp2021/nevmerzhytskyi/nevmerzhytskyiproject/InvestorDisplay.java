@@ -5,6 +5,9 @@
  */
 package org.obrii.mit.dp2021.nevmerzhytskyi.nevmerzhytskyiproject;
 
+import org.obrii.mit.dp2021.nevmerzhytskyi.user.UserInterface;
+import org.obrii.mit.dp2021.nevmerzhytskyi.display.Display;
+
 /**
  *
  * @author NEVM PC

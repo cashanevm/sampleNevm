@@ -3,19 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.obrii.mit.dp2021.nevmerzhytskyi.nevmerzhytskyiproject;
+package org.obrii.mit.dp2021.nevmerzhytskyi.house;
 
 /**
  *
  * @author NEVM PC
  */
- public  interface DisplayInterface {
-     
-    // public String showMessage(UserInterface useruInterface);
+public interface HouseDisplayInterface {
+   //  public String showAnotherMessage(UserInterface useruInterface);
 
-    public String showMessage();
-
-   
-
-    
+    public String showAnotherMessage();
 }
