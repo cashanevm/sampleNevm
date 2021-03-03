@@ -30,7 +30,7 @@
         
         %>
         <form action= "<%=request.getContextPath()%>/Data" method="get">
-            <input type="text" name="search" value="search">
+            <input type="text" name="search">
             <input type="submit" value="search data">
         </form>
         </header>
