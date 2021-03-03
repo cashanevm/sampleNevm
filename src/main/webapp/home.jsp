@@ -11,10 +11,21 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Nevm Data</title>
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/reset.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/main.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/300.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/300-700.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/700-1000.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/1000-1200.css">
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/css/1200+.css"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     </head>
     <body>
         
+       <header id="home__header">
+        <img id="logo__blue" src="img/Logo.png" alt="Stroke__blue">
         <%
         
         %>
@@ -22,44 +33,79 @@
             <input type="text" name="search" value="search">
             <input type="submit" value="search data">
         </form>
-        
+        </header>
         <%
         List<Data> dataList = (List<Data>) request.getAttribute("data");
         %>
-        
+         <main id="home__main">
+       <div id="projects__block">
         <%for(Data data:dataList){%>
         
-        <%=data.getId() %>
-        <%=data.getName()%>
-        <%=data.getAge()%>
+        
+        
+        
       
         
         
         
-        
-        
-        
-        <form action="<%=request.getContextPath()%>/DinamicFormUpdate" methd="get">
-            <input type="hidden" name="id" value="<%=data.getId() %>">
-            <input type="hidden" name="name" value="<%=data.getName()%>">
-            <input type="hidden" placeholder="integer" name="age" value="<%=data.getAge()%>">
+         <div class="project__item">
             
-            
-            <input type="submit" value="update data" >
-        </form>
-            <form action="<%=request.getContextPath()%>/Forma" methd="get" >
-            <input type="hidden" name="id" value="<%=data.getId() %>">
-
-            <input type="submit" value="delete data">
-            </form>
+             <%
+             int imgNum = data.getId();
+             while(imgNum>2){
+             imgNum = imgNum-3;
+             }
+             %>
+             
+             
+             <img src="img/image__<%=imgNum%>.png" alt="">
+            <div class="project__text">
+                <h1><%=data.getId() %> <%=data.getName()%></h1>
+                <div class="home__submit" >
+                    <p>Price: <br><%=data.getAge()%><span> $</span></p>
+                    <p>Place: <br><span>1 024 m<sup><small>2</small></sup></span></p>
+                    <p>Aera: <br><span>2 024 m<sup><small>2</small></sup></span></p>
+                    <form action="<%=request.getContextPath()%>/DinamicFormUpdate" methd="get">
+                        <input type="hidden" name="id" value="<%=data.getId() %>">
+                        <input type="hidden" name="name" value="<%=data.getName()%>">
+                        <input type="hidden" placeholder="integer" name="age" value="<%=data.getAge()%>">
+                        <input type="submit" value="update data" >
+                    </form>
+                        <form action="<%=request.getContextPath()%>/Forma" methd="get" >
+                        <input type="hidden" name="id" value="<%=data.getId() %>">
+                        <input type="submit" value="delete data">
+                        </form>
+                </div>
+            </div>
+        </div>
+        
+        
+      
         <%}%>
         
+       
+       
+       
+       </div>
+    </main>
         
-        <form action="<%=request.getContextPath()%>/DinamicForm" methd="get">
+        
+      
+        <form action="<%=request.getContextPath()%>/DinamicForm" class="add__data" methd="get">
             <input type="submit" value="add data" >
         </form>
+      <footer>
+    
+        <img src="img/Logo.png" alt="">
+        <div class="footer__email">
+            <p>Investor Newsletter Sign Up</p>
+            <input type="email" placeholder="E-mail">
+            
+        </div>
+    
+
+</footer>  
         
         
-        <h1>Hello World!</h1>
     </body>
 </html>

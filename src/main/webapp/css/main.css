@@ -162,7 +162,7 @@ padding: 200px 0;
 
     }
     .add__data input[type="submit"]{
-        margin: 0 5% 0 5% ;
+        margin: 30px 5% 0 5% ;
         width: 90%;
         
         height: 68px;
@@ -184,24 +184,96 @@ padding: 200px 0;
     }
 
 .form__top{
-    background-color: black;
+    
+    width: 100%;
+    padding: 115px 0 115px 30px;
+    background-image: url(../img/backgraund__form1.png);
+    margin-bottom: 30px;
 }
 .form__bottom{
 
+    width: 100%;
+    display: flex;
 }
 .form__left{
-    background-color: blue;}
+    padding: 108px 0 108px 30px;
+    
+    margin-right: 1%;
+    width: 49%;
+
+    background-image: url(../img/backgraund__form2.png);
+}
 .form__right{
-    background-color: blueviolet;
+    padding: 108px 0 108px 30px;
+    margin-left: 1%;
+    width: 49%;
+    background-image: url(../img/backgraund__form3.png);
 }
 #form__din{
+    min-width: 720px;
     margin: 0 auto;
     width: 67.7%;
 }
+#form__din p{
+    margin-bottom: 3px;
+    text-shadow: 1px 1px 2px black;
+    color: white;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 42px;
+    letter-spacing: 0em;
+    text-align: left;
+    
 
+}
 
+#form__din input[type="text"]{
+    width: 50%;
+    color:white;
+    
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 42px;
+    letter-spacing: 0em;
+    text-align: center;
+    
+    padding:10px 0 10px 0;
+   
+   
+    border: 3px solid white;
+    background-color: rgba(0, 0, 0, 0.3);
+}
 
+#form__din input[type="submit"]{
+    width: 310px;
+    border: 3px solid white;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 27px 69px;
+    border: none;
+    color: white;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: center;
+    
 
+}
+#form__din h1{
+    border-bottom: 3px solid #064CA8;
+    padding-bottom: 30px;
+    color:#064CA8;
+font-size: 36px;
+font-style: normal;
+font-weight: 700;
+line-height: 42px;
+letter-spacing: 0em;
+text-align: center;
+
+}
 /* .project__text p {
     width: 10%;
 

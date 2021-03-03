@@ -911,7 +911,7 @@
 
     #home__main input[type="submit"]{
         width: 90%;
-        background-color: #0058A2;
+        background-color: rgba(0, 0, 0, 0.3);
         padding: 9% 23%;
         border: none;
         color: white;

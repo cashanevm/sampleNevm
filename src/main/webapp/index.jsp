@@ -43,10 +43,10 @@
     <div id="started__block">
         <h1>Makes homes <br> without over <br>prices & long terms</h1>
         <p>We looks like fake but it false opinion</p> 
-        <form action="<%=request.getContextPath()%>/form" method="get">
+        <form action="<%=request.getContextPath()%>/Data" method="get">
                 <input id="get__started" type="submit" value="GET STRATED"> 
                 </form>
-        <button id="sham__button" >OPEN CIRCUIT</button>
+<!--        <button id="sham__button" >OPEN CIRCUIT</button>-->
        
     </div>
     <div id="who__we">
@@ -94,7 +94,7 @@
 
     <div id="projects__block">
         <div class="project__item">
-            <img src="img/image.png" alt="">
+            <img src="img/image__0.png" alt="">
             <div class="project__text">
                 <h1>Name of this project</h1>
                 <div style="display: flex;">
@@ -105,7 +105,7 @@
             </div>
         </div>
         <div class="project__item">
-            <img src="img/Image (1).png" alt="">
+            <img src="img/image__1.png" alt="">
             <div class="project__text">
                 <h1>Name of this project</h1>
                 <div style="display: flex;">
@@ -116,7 +116,7 @@
             </div>  
         </div>
         <div class="project__item">
-            <img src="img/Image (2).png" alt="">
+            <img src="img/image__2.png" alt="">
             <div class="project__text">
                 <h1>Name of this project</h1>
                 <div style="display: flex;">
