@@ -249,7 +249,7 @@
         margin-right: 21.875%;
     }
     .project__text{
-        
+        width: 78.125%;
         margin:30px 0 0 21.875%;
     }
     .project__text h1{
@@ -262,6 +262,7 @@
         text-align: left;
     }
     .project__text p{
+        width: 10%;
         font-size: 18px;
         font-style: normal;
         font-weight: 400;
@@ -843,4 +844,74 @@
         color: white;
         
     }
+
+    #home__header img{   
+        display: none;
+    }
+
+    #home__header input[type="submit"]{
+        width: 310px;
+        background-color: #0058A2;
+        padding: 27px 69px;
+        border: none;
+        color: white;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 23px;
+        letter-spacing: 0em;
+        text-align: center;
+        margin: 0 0 0 30px;
+
+    }
+    #home__header form{
+        display: flex;
+        
+    }
+    #home__header input[type="text"]{
+        width: 100%;
+        color: white;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 29px;
+        letter-spacing: 0em;   
+        padding:25px 0 29px 34px;
+        margin: 0 0 0 6%;
+        color: white;
+        border: 3px solid white;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    #home__header{
+        top: 54px;
+        width: 100%;
+        position: fixed;
+    }
+    #home__main{
+        padding: 143px 0 0 0 ;
+    }
+    .home__submit{
+        /* width: 50.125%; */
+        display: flex;
+    }
+
+    #home__main input[type="submit"]{
+        width: 95%;
+        background-color: #0058A2;
+        padding: 9% 23%;
+        border: none;
+        color: white;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 23px;
+        letter-spacing: 0em;
+        text-align: center;
+        margin: 0 5px 0 5px;
+    }
+    
+#home__main form {
+
+    width: 30%;
+}
 }

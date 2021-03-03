@@ -33,7 +33,7 @@
         <%=data.getName()%>
         <%=data.getAge()%>
       
-        <%=session.getAttribute("formType1")%>
+        
         
         
         
