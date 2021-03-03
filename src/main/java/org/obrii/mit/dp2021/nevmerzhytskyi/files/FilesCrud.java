@@ -69,7 +69,7 @@ public class FilesCrud implements DataCrudInterface {
 
         } catch (FileNotFoundException ex) {
             Logger.getLogger(FilesCrud.class.getName()).log(Level.SEVERE, null, ex);
-            return null;
+            return new ArrayList<Data>();
         } catch (IOException | ClassNotFoundException ex) {
             Logger.getLogger(FilesCrud.class.getName()).log(Level.SEVERE, null, ex);
             return new ArrayList<Data>();
