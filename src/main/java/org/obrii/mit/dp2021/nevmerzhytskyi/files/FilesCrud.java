@@ -18,8 +18,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.obrii.mit.dp2021.nevmerzhytskyi.data.Data;
 import org.obrii.mit.dp2021.nevmerzhytskyi.storehouse.DataCrudInterface;
-//import org.obrii.mit.mykolaichuk.mavenproject8.data.Data;
-//import org.obrii.mit.mykolaichuk.mavenproject8.data.CrudDataInterface;
+
 
 /**
  *
@@ -73,14 +72,39 @@ public class FilesCrud implements DataCrudInterface {
             return null;
         } catch (IOException | ClassNotFoundException ex) {
             Logger.getLogger(FilesCrud.class.getName()).log(Level.SEVERE, null, ex);
-            return null;
+            return new ArrayList<Data>();
         }
 
     }
 
+      @Override
+    public List<Data> searchData(String s) {
+
+ 
+       
+            
+            List<Data> newData = new ArrayList<>();
+        for (Data d : this.readData()) {
+            
+            if(d.getName().contains(s)){
+                newData.add(d);}
+                
+            
+        }
+        
+
+            return newData;
+
+        
+
+    }
+    
+    
+    
     @Override
     public void createData(Data addingData) {
         List<Data> data = this.readData();
+        addingData.setId(data.size());
         data.add(addingData);
         this.writeData(data);
 
@@ -109,6 +133,19 @@ public class FilesCrud implements DataCrudInterface {
         this.writeData(newData);
     }
 
+       public void streamliningData() {        
+        List<Data> newData = new ArrayList<>();
+        int i = 0;
+        for (Data d : this.readData()) {
+            d.setId(i);
+            i++;
+                newData.add(d);
+            
+        }
+        this.writeData(newData);
+    }
+
+    
     public File getFile() {
         return file;
     }

@@ -7,30 +7,30 @@ package org.obrii.mit.dp2021.nevmerzhytskyi.nevmerzhytskyiproject;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import org.obrii.mit.dp2021.nevmerzhytskyi.data.Data;
 import org.obrii.mit.dp2021.nevmerzhytskyi.files.Config;
 import org.obrii.mit.dp2021.nevmerzhytskyi.files.FilesCrud;
 import org.obrii.mit.dp2021.nevmerzhytskyi.storehouse.DataCrudInterface;
 
+
+
+
 /**
- *
+ *передача из jsp к jsp
  * @author NEVM PC
  */
 @WebServlet(name = "DataServlet", urlPatterns = {"/Data"})
 public class DataServlet extends HttpServlet {
-
-    
-    //DataCrudInterface dataCrud = new StoreCrud();
-            DataCrudInterface dataCrud = new FilesCrud(new File(Config.FILE_NAME));
-       //   dataCrud.setFileName(new File("feef.txt"));
-            //StoreCrud(File file)
-            
-            
+    DataCrudInterface dataCrud = new FilesCrud(new File(Config.FILE_NAME));
+    String  formType1 = "update"; 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -54,15 +54,17 @@ public class DataServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       request.setAttribute("data", dataCrud.readData());
-       request.getRequestDispatcher("home.jsp").forward(request, response);
-        
-        
-        
-        
-        
-        
-    }
+                HttpSession session  = request.getSession();
+                session.setAttribute("formType1", formType1);
+                System.out.println(request.getParameter("search"));
+                if(request.getParameter("search")!=null){
+                request.setAttribute("data", dataCrud.searchData(request.getParameter("search")));
+                }
+                else{
+                request.setAttribute("data", dataCrud.readData());
+                }
+                request.getRequestDispatcher("home.jsp").forward(request, response); 
+            }
 
     /**
      * Handles the HTTP <code>POST</code> method.
@@ -75,47 +77,27 @@ public class DataServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-      
-        dataCrud.createData(
-        new Data(
-        Integer.parseInt(request.getParameter("id")),
-        request.getParameter("name"),
-        Integer.parseInt(request.getParameter("age"))
-        
-        )
-        );
-        
-        
-        
-        
-        
-        
-        doGet(request, response);
-    }
+                formType1="create";
+                dataCrud.createData(
+                new Data(Integer.parseInt(request.getParameter("id")),request.getParameter("name"),Integer.parseInt(request.getParameter("age"))));
+                doGet(request, response);
+            }
 
       @Override
     protected void doPut(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       int myId = Integer.parseInt(request.getParameter("id"));
-       dataCrud.updateData(myId,
-        new Data(
-        Integer.parseInt(request.getParameter("id")),
-        request.getParameter("name"),
-        Integer.parseInt(request.getParameter("age"))
-        
-        )
-        );
-       doGet(request, response);
+                int myId = Integer.parseInt(request.getParameter("id"));
+                formType1="update";
+                dataCrud.updateData(myId,new Data(Integer.parseInt(request.getParameter("id")),request.getParameter("name"),Integer.parseInt(request.getParameter("age"))));
+                doGet(request, response);
     }
       @Override
     protected void doDelete(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-         int myId = Integer.parseInt(request.getParameter("id"));
-       dataCrud.deleteData(myId
-        
-        );
-        doGet(request, response);
-       
+                int myId = Integer.parseInt(request.getParameter("id"));
+                dataCrud.deleteData(myId);
+                dataCrud.streamliningData();
+                doGet(request, response);
     }
     /**
      * Returns a short description of the servlet.

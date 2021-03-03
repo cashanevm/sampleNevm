@@ -5,6 +5,7 @@
  */
 package org.obrii.mit.dp2021.nevmerzhytskyi.nevmerzhytskyiproject;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -12,16 +13,24 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import org.obrii.mit.dp2021.nevmerzhytskyi.data.Data;
+import org.obrii.mit.dp2021.nevmerzhytskyi.files.Config;
+import org.obrii.mit.dp2021.nevmerzhytskyi.files.FilesCrud;
+import org.obrii.mit.dp2021.nevmerzhytskyi.storehouse.DataCrudInterface;
 
 /**
  *
  * @author NEVM PC
  */
-@WebServlet(name = "FormServlet", urlPatterns = {"/Forma"})
-public class FormServlet extends HttpServlet {
-    
-    DataServlet dataServlet = new DataServlet();
-    
+@WebServlet(name = "DinamicFormUpdate", urlPatterns = {"/DinamicFormUpdate"})
+public class DinamicFormUpdate extends HttpServlet {
+            DataCrudInterface dataCrud = new FilesCrud(new File(Config.FILE_NAME));
+       //   dataCrud.setFileName(new File("feef.txt"));
+            //StoreCrud(File file)
+          String  formType1 = "update";
+            
+    /**
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -31,7 +40,7 @@ public class FormServlet extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-
+    
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -45,8 +54,11 @@ public class FormServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-                dataServlet.doDelete(request,response);
-    }
+                HttpSession session  = request.getSession();
+                session.setAttribute("formType1", formType1);
+                request.setAttribute("data", dataCrud.readData());
+                request.getRequestDispatcher("dinamic_form.jsp").forward(request, response);
+            }
 
     /**
      * Handles the HTTP <code>POST</code> method.
@@ -59,8 +71,11 @@ public class FormServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-                dataServlet.doPut(request,response);
-    }
+                int myId = Integer.parseInt(request.getParameter("id"));
+                formType1="update";
+                dataCrud.updateData(myId,new Data(Integer.parseInt(request.getParameter("id")),request.getParameter("name"),Integer.parseInt(request.getParameter("age"))));
+                doGet(request, response);
+            }
 
     /**
      * Returns a short description of the servlet.

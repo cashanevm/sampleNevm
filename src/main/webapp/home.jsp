@@ -14,6 +14,15 @@
         <title>JSP Page</title>
     </head>
     <body>
+        
+        <%
+        
+        %>
+        <form action= "<%=request.getContextPath()%>/Data" method="get">
+            <input type="text" name="search" value="search">
+            <input type="submit" value="search data">
+        </form>
+        
         <%
         List<Data> dataList = (List<Data>) request.getAttribute("data");
         %>
@@ -24,16 +33,21 @@
         <%=data.getName()%>
         <%=data.getAge()%>
       
+        <%=session.getAttribute("formType1")%>
         
-        <form action="form_update.jsp" methd="post">
+        
+        
+        
+        
+        <form action="<%=request.getContextPath()%>/DinamicFormUpdate" methd="get">
             <input type="hidden" name="id" value="<%=data.getId() %>">
             <input type="hidden" name="name" value="<%=data.getName()%>">
             <input type="hidden" placeholder="integer" name="age" value="<%=data.getAge()%>">
             
             
-            <input type="submit" value="update data">
+            <input type="submit" value="update data" >
         </form>
-            <form action="<%=request.getContextPath()%>/Forma" methd="get">
+            <form action="<%=request.getContextPath()%>/Forma" methd="get" >
             <input type="hidden" name="id" value="<%=data.getId() %>">
 
             <input type="submit" value="delete data">
@@ -41,8 +55,8 @@
         <%}%>
         
         
-        <form action="form2.jsp">
-            <input type="submit" value="add data">
+        <form action="<%=request.getContextPath()%>/DinamicForm" methd="get">
+            <input type="submit" value="add data" >
         </form>
         
         

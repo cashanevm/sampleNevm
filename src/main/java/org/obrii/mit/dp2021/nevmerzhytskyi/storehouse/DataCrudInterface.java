@@ -35,8 +35,8 @@ public void createData(Data addingData);
  public List<Data> readData();
  public void writeData(List<Data> data);
 
-
-
+public void streamliningData();
+public List<Data> searchData(String s);
 
 
 //    void createData(Data addingData);
