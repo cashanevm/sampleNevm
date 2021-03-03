@@ -154,6 +154,53 @@ padding: 200px 0;
         
     }
 
+    .add__data{
+        
+
+
+
+
+    }
+    .add__data input[type="submit"]{
+        margin: 0 5% 0 5% ;
+        width: 90%;
+        
+        height: 68px;
+       
+        background-color: #0058A2;
+        
+        border: none;
+        color: white;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 23px;
+        letter-spacing: 0em;
+        text-align: center;
+        
+    }
+    input[type="submit"]:hover{
+        box-shadow: 0 0 10px rgba(0,0,0,0.5); 
+    }
+
+.form__top{
+    background-color: black;
+}
+.form__bottom{
+
+}
+.form__left{
+    background-color: blue;}
+.form__right{
+    background-color: blueviolet;
+}
+#form__din{
+    margin: 0 auto;
+    width: 67.7%;
+}
+
+
+
 
 /* .project__text p {
     width: 10%;

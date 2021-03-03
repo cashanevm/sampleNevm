@@ -11,6 +11,20 @@ package org.obrii.mit.dp2021.nevmerzhytskyi.files;
  */
 public class Config {
     
-    public static final String FILE_NAME="data.txt";
+    private static String fileName="";
+    
+    public static String getFileName(){
+    return fileName;
+    }
+    
+    public static void setFileName(String aFileName){
+    
+    fileName = aFileName;
+    }
+    
+    
+    //public static final String FILE_NAME="data.txt";
+
+    
     
 }

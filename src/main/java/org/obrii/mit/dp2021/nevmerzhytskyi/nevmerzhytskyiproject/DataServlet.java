@@ -29,8 +29,13 @@ import org.obrii.mit.dp2021.nevmerzhytskyi.storehouse.DataCrudInterface;
  */
 @WebServlet(name = "DataServlet", urlPatterns = {"/Data"})
 public class DataServlet extends HttpServlet {
-    DataCrudInterface dataCrud = new FilesCrud(new File(Config.FILE_NAME));
+    DataCrudInterface dataCrud = new FilesCrud(new File(Config.getFileName()));
     String  formType1 = "update"; 
+    
+    
+    
+    
+    
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -54,9 +59,16 @@ public class DataServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+                
+        
                 HttpSession session  = request.getSession();
                 session.setAttribute("formType1", formType1);
                 System.out.println(request.getParameter("search"));
+                if (Config.getFileName().equals("")) {
+            Config.setFileName(this.getServletContext().getRealPath("") + "data.txt");
+            dataCrud = new FilesCrud(new File(Config.getFileName()));
+        }
+                
                 if(request.getParameter("search")!=null){
                 request.setAttribute("data", dataCrud.searchData(request.getParameter("search")));
                 }

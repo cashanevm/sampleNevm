@@ -25,7 +25,7 @@ import org.obrii.mit.dp2021.nevmerzhytskyi.storehouse.DataCrudInterface;
  */
 @WebServlet(name = "DinamicForm", urlPatterns = {"/DinamicForm"})
 public class DinamicForm extends HttpServlet {
-DataCrudInterface dataCrud = new FilesCrud(new File(Config.FILE_NAME));
+DataCrudInterface dataCrud = new FilesCrud(new File(Config.getFileName()));
        //   dataCrud.setFileName(new File("feef.txt"));
             //StoreCrud(File file)
           String  formType1 = "create";
