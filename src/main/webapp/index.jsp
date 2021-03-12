@@ -43,7 +43,7 @@
     <div id="started__block">
         <h1>Makes homes <br> without over <br>prices & long terms</h1>
         <p>We looks like fake but it false opinion</p> 
-        <form action="<%=request.getContextPath()%>/Data" method="get">
+        <form action="<%=request.getContextPath()%>/DataBase" method="get">
                 <input id="get__started" type="submit" value="GET STRATED"> 
                 </form>
 <!--        <button id="sham__button" >OPEN CIRCUIT</button>-->

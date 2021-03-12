@@ -34,7 +34,7 @@
        
        
        
-       <form action= "<%=request.getContextPath()%><%if(name == "update"){%>/Forma<%}else{%>/Data<%}%>" method="post">
+       <form action= "<%=request.getContextPath()%><%if(name == "update"){%>/Forma<%}else{%>/DataBase<%}%>" method="post">
                 <input type="hidden" name="id" value="<%if(name == "update"){%><%=request.getParameter("id")%><%}else{%>0<%}%>">
                 <div class="form__top">
                     <p>Enter the project name:</p>
@@ -46,7 +46,7 @@
                         <input type="text" placeholder="integer" name="age" value="<%if(name == "update"){%><%=request.getParameter("age")%><%}else{%><%}%>">
                     </div>
                     <div class="form__right">
-                    <input type="submit" value="<%if(name == "update"){%>Updata Data<%}else{%>Create Data<%}%>">
+                    <input type="submit" value="<%if(name == "update"){%>Update Data<%}else{%>Create Data<%}%>">
                     </div>
                 </div>
             </form>

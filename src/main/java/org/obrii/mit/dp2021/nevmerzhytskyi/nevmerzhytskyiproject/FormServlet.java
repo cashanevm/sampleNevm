@@ -20,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "FormServlet", urlPatterns = {"/Forma"})
 public class FormServlet extends HttpServlet {
     
-    DataServlet dataServlet = new DataServlet();
+    BDServlet dataServlet = new BDServlet();
     
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>

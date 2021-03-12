@@ -25,7 +25,7 @@ import org.obrii.mit.dp2021.nevmerzhytskyi.storehouse.DataCrudInterface;
  */
 @WebServlet(name = "DinamicForm", urlPatterns = {"/DinamicForm"})
 public class DinamicForm extends HttpServlet {
-DataCrudInterface dataCrud = new FilesCrud(new File(Config.getFileName()));
+//DataCrudInterface dataCrud = new FilesCrud(new File(Config.getFileName()));
        //   dataCrud.setFileName(new File("feef.txt"));
             //StoreCrud(File file)
           String  formType1 = "create";
@@ -54,7 +54,7 @@ DataCrudInterface dataCrud = new FilesCrud(new File(Config.getFileName()));
             throws ServletException, IOException {
                 HttpSession session  = request.getSession();
                 session.setAttribute("formType1", formType1);
-                request.setAttribute("data", dataCrud.readData());
+                //request.setAttribute("data", dataCrud.readData());
                 request.getRequestDispatcher("dinamic_form.jsp").forward(request, response);
             }
 
@@ -70,8 +70,8 @@ DataCrudInterface dataCrud = new FilesCrud(new File(Config.getFileName()));
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
                 formType1="create";
-                dataCrud.createData(
-                new Data(Integer.parseInt(request.getParameter("id")),request.getParameter("name"),Integer.parseInt(request.getParameter("age"))));
+                //dataCrud.createData(
+                //new Data(Integer.parseInt(request.getParameter("id")),request.getParameter("name"),Integer.parseInt(request.getParameter("age"))));
                 doGet(request, response);
             }
 
