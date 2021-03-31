@@ -54,7 +54,7 @@
          <div class="project__item">
             
              <%
-             int imgNum = data.getId();
+            int imgNum = data.getId();
              while(imgNum>2){
              imgNum = imgNum-3;
              }

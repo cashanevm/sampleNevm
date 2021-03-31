@@ -7,11 +7,13 @@ package org.obrii.mit.dp2021.nevmerzhytskyi.nevmerzhytskyiproject;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
 /**
  *
@@ -21,6 +23,16 @@ import javax.servlet.http.HttpServletResponse;
 public class FormServlet extends HttpServlet {
     
     BDServlet dataServlet = new BDServlet();
+    
+   
+     @Override
+    public void init(ServletConfig config) throws ServletException {
+    super.init(config);
+    dataServlet = new BDServlet();
+    dataServlet.init(config);
+    
+    }
+    
     
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>

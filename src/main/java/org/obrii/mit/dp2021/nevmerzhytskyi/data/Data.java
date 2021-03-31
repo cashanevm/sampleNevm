@@ -6,6 +6,10 @@
 package org.obrii.mit.dp2021.nevmerzhytskyi.data;
 
 import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 
 
@@ -13,7 +17,11 @@ import java.io.Serializable;
  *
  * @author NEVM PC
  */
+@Entity
 public class  Data implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    
     private int id;
     private String name;
     private int age;
@@ -26,7 +34,11 @@ public class  Data implements Serializable {
         this.name = name;
         this.age = age;
     }
-
+ public Data( String name, int age) {
+        
+        this.name = name;
+        this.age = age;
+    }
     public int getAge() {
         return age;
     }
