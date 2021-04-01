@@ -65,10 +65,11 @@ Iterator<Data> iterator = set.iterator();
     BDI.deleteById(id);
     }
     public void updateData(Data data,Integer id){
+    Data upD = BDI.findById(id).get();
+        upD.setName(data.getName());
+        upD.setAge(data.getAge());
     
-    data.setId(id);
-    BDI.deleteById(id);
-    BDI.save(data);
+    BDI.save(upD);
     }
     
 }
